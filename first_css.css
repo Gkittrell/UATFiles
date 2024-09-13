@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(29, 122, 91);
+    font-size: 2.1em;
+}
+h1 {
+    color:rgb(246, 248, 247);
+}
+#intro {
+    font-size: 1.0em;
+    color:brown;
+}
+.colorful {
+    color:antiquewhite;
+}
+p {
+    text-align: center;
+    color:darkgoldenrod;
+}
+h6 {
+    color:aliceblue
+}
