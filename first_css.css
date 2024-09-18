@@ -1,9 +1,37 @@
 body {
+    text-align: center;
     background-color: rgb(29, 122, 91);
     font-size: 2.1em;
+    color:bisque
 }
+nav {
+    height: 6000px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px
+}
+
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+
+#memeimage{
+    margin-right: 200px;
+    width:400px;
+}
+
+header{
+    text-align: center;
+}
+
+
 h1 {
+    text-align: center;
     color:rgb(246, 248, 247);
+    center;
+    
 }
 #intro {
     font-size: 1.0em;
@@ -14,8 +42,10 @@ h1 {
 }
 p {
     text-align: center;
-    color:darkgoldenrod;
+    color:whitesmoke;
+    font-size:large;
 }
 h6 {
+    text-align: center;
     color:aliceblue
 }
