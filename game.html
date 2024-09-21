@@ -1,0 +1,33 @@
+
+
+<!---below this is just text that is added to the screen--> 
+You'll never win
+<!--doctype shows that this is an html document-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.">
+ <!--This here add a name to the tab for the page-->
+ <title>Gilbs Casino</title>
+ <!---This code here links my css file to the html file giving it a personalized look-->
+ <link rel="stylesheet" href="first_css.css">
+</head>
+<body>
+    
+    <!--This h1 is my heading for the page.-->
+ <h1>Welcome to Gilbs Casino!</h1>
+ <image src="images/webcoinflip.png"></image>
+ <!---This h2 is a second heading for my page-->
+ <h2>Coin toss game</h2>
+ <!-- p shows text in the paragraph body of the website-->
+ <p>Guess the outcome of the coin toss</p>
+ <!--the button function adds a button the page, the onclick makes it do something when clicked, when clicked, it runs my javascript code from playgame()-->
+ <button onclick="playGame()">Toss the coin!</button> 
+ 
+<!---div calls on the code to be displayed for the user who is playing the game-->
+ <div id="result"></div>
+<!--This is how i imported my javascript file into my html file by useing script and src to call on the file-->
+ <script src="index.js"></script>
+</body>
+</html>
