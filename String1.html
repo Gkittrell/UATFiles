@@ -1,0 +1,62 @@
+
+<!--Gilbert Kittrell-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String1.Html</title>
+    <link rel="stylesheet" href="main.css"/> 
+</head>
+<body>
+    <!--h1 makes a header for the page-->
+    <h1>Palindrome Checker</h1>   
+<!---the <p> represents a paragraph on the page, and any text can be added-->
+    <p>Enter a word or phrase:</p>
+    <!---<input> makes a box for the user to enter information, the id of it gives it a name. and the placeholder gives the user a hint of what to do.-->
+    <input type="text" id="inputString" placeholder="Check if you have a Palindrome">
+    <!--the button function, makes a button, and when used with onclick, you can add a function for it perform on the click.-->
+    <button onclick="checkPalindrome()">Check</button>
+    <!---This will display the answer you gave after running the code in your script.-->
+    <p id="result"></p>
+
+
+    <script>
+
+//This creates a function shell named checkPalindrome
+        function checkPalindrome() {
+    //this sets a variable and it's name is inputString, and it's assisigned to get the value used in the input string id
+    let inputString = document.getElementById("inputString").value;
+
+    
+    
+
+    ///this is setting a variable named isPalindrome, and setting it to if the inputString is equal to the inputString split into seperate characters, and then reversing those characters, and then joining them back together
+    let isPalindrome = inputString === inputString.split("").reverse().join("");
+
+    //this is setting a variable equal to the id "result" so when it checks if you have a palindrome, it will either display you got it correct, or it will say you don't have a palindrome
+    let resultElement = document.getElementById("result");
+    //if the word you enter is a palindrome it will run the code below
+    if (isPalindrome) {
+        resultElement.textContent = "The string is a palindrome!";
+        ///anything else, it will display this message below.
+    } else {
+        resultElement.textContent = "The string is not a palindrome.";
+    }
+
+    // Prompt for another word
+    let continueCheck = prompt("Do you want to check another word? (yes/no)");
+    //This is showing me that this will check what the user put in the prompt, and if it is not === to yes, then the code stops.
+    if (continueCheck.toLowerCase() !== "yes") {
+        // Exit the loop if the user doesn't want to continue
+        return;
+    }
+}
+
+
+
+    </script>
+</body>
+</html>
