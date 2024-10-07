@@ -8,33 +8,35 @@
     
 </head>
 <body>
+    <!---the code below here creates buttons and on the click it assigns them to a function-->
     <button onclick ="startMoving('right')">Move Right</button>
     <button onclick ="startMoving('left')">Move Left</button>
     <button onclick ="startMoving('up')">Move Up</button>
     <button id="startButton" onclick ="startMoving('start')">Start</button>
     
-
+<!---the code below here with the button id to stop moving the image-->
     <button id="stopButton" onclick="stopMoving()">Stop</button>
     <h1><u>
         
         </u>
     </h1>
    
-  
+  <!---this code prints out my name and the class-->
     <h2 style="color:aquamarine">
         Gilbert Kittrell, CSC102.
     </h2>
+    <!--the code below <a> creates a link to click on the webpage-->
     <h6 style = "font-style:italic;">
          <a href="https://www.uat.edu">Click Here</a> to go to UAT
     </h6>
    
 
 
-    
+    <!--this code here call the image and makes it able to move-->
     <div id="box">
         <img id="Movememe" src="Movememe.jpeg">
     </div>
-
+<!---below here is the script code that makes the image move-->
     <script>
         let interval;
         let image = document.getElementById("Movememe");
@@ -44,36 +46,36 @@ function startMoving(direction){
     interval = setInterval (() => {
         let left = image.offsetLeft;
         let top = image.offsetTop;
-
+///the code below here moves the image by 5 pixals at a time.
         if(direction === 'right') left += 5;
         if(direction === 'left') left -= 5;
         if(direction === 'up') top -= 5;
         if(direction === 'start') top += 5;
         
-
+///the code below here, makes sure you're able to move the image from it's position you set.
         image.style.left = `${left}px`;
         image.style.top = `${top}px`;
 
                 
-
+///this code below makes the intervals every 50 miliseconds
     }, 50);
 
 
 
 
 }
-
+///this code below stops the image from moving, and applies this to the stop button when you call it earlier in the page
 function stopMoving(){
     clearInterval(interval);
 
     document.getElementById("startButton").disabled = true;
 
 }
-
+///this button should disable the start button
     function disableStartButton(){
         document.getElementById("startButton").disabled = true;
     }
-
+///this should enable the start button 
     function enableStartButton(){
         document.getElementById("startButton").disabled = false;
     }
