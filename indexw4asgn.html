@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKittrell's website</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <button onclick ="startMoving('right')">Move Right</button>
+    <button onclick ="startMoving('left')">Move Left</button>
+    <button onclick ="startMoving('up')">Move Up</button>
+    <button id="startButton" onclick ="startMoving('start')">Start</button>
+    
+
+    <button id="stopButton" onclick="stopMoving()">Stop</button>
+    <h1><u>
+        
+        </u>
+    </h1>
+   
+  
+    <h2 style="color:aquamarine">
+        Gilbert Kittrell, CSC102.
+    </h2>
+    <h6 style = "font-style:italic;">
+         <a href="https://www.uat.edu">Click Here</a> to go to UAT
+    </h6>
+   
+
+
+    
+    <div id="box">
+        <img id="Movememe" src="Movememe.jpeg">
+    </div>
+
+    <script>
+        let interval;
+        let image = document.getElementById("Movememe");
+
+function startMoving(direction){
+    stopMoving();
+    interval = setInterval (() => {
+        let left = image.offsetLeft;
+        let top = image.offsetTop;
+
+        if(direction === 'right') left += 5;
+        if(direction === 'left') left -= 5;
+        if(direction === 'up') top -= 5;
+        if(direction === 'start') top += 5;
+        
+
+        image.style.left = `${left}px`;
+        image.style.top = `${top}px`;
+
+                
+
+    }, 50);
+
+
+
+
+}
+
+function stopMoving(){
+    clearInterval(interval);
+
+    document.getElementById("startButton").disabled = true;
+
+}
+
+    function disableStartButton(){
+        document.getElementById("startButton").disabled = true;
+    }
+
+    function enableStartButton(){
+        document.getElementById("startButton").disabled = false;
+    }
+
+    function disableStopButton(){
+        document.getElementById("stopButton").disabled = false;
+    }
+
+    function enableStopButton(){
+        document.getElementById("stopButton").disable = false;
+    }
+
+    </script>
+    
+</body>
+</html>
