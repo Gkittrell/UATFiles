@@ -1,7 +1,7 @@
 
 
 <!---below this is just text that is added to the screen--> 
-You'll never win
+
 <!--doctype shows that this is an html document-->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,20 +14,42 @@ You'll never win
  <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <header>
+<h2>
+    <nav>
+        <a href="New_Homepage.html"> Home Page</a>
+        <a href="Palindrome.html"> Palindrome Checker</a>
+        <a href="Validation_Palindrome.html">Name and Zip</a>
+        <a href="boards.html"> Degree Objectives</a>
+        <a href="ClassAudio.html">Audio Page</a>
+    </nav>
+</h2>
+    </header>
+ 
+
     
     <!--This h1 is my heading for the page.-->
  <h1>Welcome to Gilbs Casino!</h1>
  <image src="images/webcoinflip.png"></image>
  <!---This h2 is a second heading for my page-->
- <h2>Coin toss game</h2>
+ <h2>Coin Toss Game</h2>
  <!-- p shows text in the paragraph body of the website-->
- <p>Guess the outcome of the coin toss</p>
+ <p><strong>Guess the outcome of the coin toss</p>
  <!--the button function adds a button the page, the onclick makes it do something when clicked, when clicked, it runs my javascript code from playgame()-->
+ <!---the button is in this position because when I click it, I want the code beneath it to run-->
  <button onclick="playGame()">Toss the coin!</button> 
  
 <!---div calls on the code to be displayed for the user who is playing the game-->
  <div id="result"></div>
 <!--This is how i imported my javascript file into my html file by useing script and src to call on the file-->
  <script src="index.js"></script>
+
+ <footer>Gilbert Kittrell<br>
+    Univeristy of Advancing Technology<br>
+    2625 W. Baseline Road<br> Tempe, AZ 85283-1056<br>
+    <a href="https://www.uat.edu/">UAT.EDU</a>
+
+
+</footer>
 </body>
 </html>

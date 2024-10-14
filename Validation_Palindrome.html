@@ -7,27 +7,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>String1.Html</title>
+    <title>Name and Zip Check</title>
     <link rel="stylesheet" href="main.css"/> 
 </head>
 <body>
-<header>
+ <header>
 <h2>
     <nav>
         <a href="New_Homepage.html"> Home Page</a>
         <a href="game.html"> Heads or Tails</a>
-        <a href="Validation_Palindrome.html">Name and Zip</a>
+        <a href="Palindrome.html">Palindrome Checker</a>
         <a href="boards.html"> Degree Objectives</a>
         <a href="ClassAudio.html">Audio Page</a>
     </nav>
 </h2>
-</header>
-
-
-
-
+ </header>
     <!--h1 makes a header for the page-->
-    <h1>Palindrome Checker</h1>   
+    <h1>Name and Zip Check With Palindrome</h1>   
 <!---the <p> represents a paragraph on the page, and any text can be added-->
     <p>Enter a word or phrase:</p>
     <!---<input> makes a box for the user to enter information, the id of it gives it a name. and the placeholder gives the user a hint of what to do.-->
@@ -73,7 +69,52 @@
 
 
     </script>
+<!---This code here presents the user with three text boxes, and two buttons, the first button will check if you name is over 20 characters, and it will also conc the name if it is under 20 characters-->
+<input id="firstName" type="text" placeholder="First Name">
+<input id="lastName" type="text" placeholder="Last Name">
+<button onclick="concat_full_name()">Conc.Name</button><br>
+<!---The code shown here will check if the zip code is more than 5 characters, if it is 5 characters-->
+<input id="zipCode" type="text" placeholder="Zip Code">
+<button onclick="check_Zip() ">Check Zip</button>
 
+<p id="name"></p><br>
+<p id="zipCodeResult"></p>  
+<script>
+    ///This code creates a function and gives it a name
+    function concat_full_name(){
+        ///these three lines of code, set variables by using let, and then it looks at the document, and gets the elements called on, and also by taking the value that user put in
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        let full_Name = firstName + " " + lastName;
+        ///this creates a loop to check the length of the full name.
+        if (full_Name.length > 20) {
+            alert("This Name Is Too Long Please Resubmit a shorter name");
+            return;
+        
+        }
+        ///here the this line of code, looks at the document, gets the elementt "name" and then it updates the innerhtml
+        document.getElementById("name").innerHTML = full_Name;
+
+    }
+
+    function check_Zip() {
+        let zipCode = document.getElementById("zipCode").value;  
+        // Get the value of the input
+        // Check the length of the ZIP code and checks if it 5 characters, anything above or below a invalid alert pops up.
+        if (zipCode.length > 5 || zipCode.length < 5) {  
+            alert("Not a valid Zip Code");
+            return true;
+
+          
+
+        
+
+        }
+        ///the code below gets the element "zipcoderesult" inside of the html, and displays the secret message
+
+        document.getElementById("zipCodeResult").innerHTML = "This is a top secret message, Bonjour Je suis Gilbert ! Au revoir";  // Display a success message
+    }
+</script>
 
 <footer>Gilbert Kittrell<br>
     Univeristy of Advancing Technology<br>
@@ -82,5 +123,8 @@
 
 
 </footer>
+
+
+
 </body>
 </html>
